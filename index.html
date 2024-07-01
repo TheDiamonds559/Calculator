@@ -12,18 +12,19 @@
             <button onclick="getNumber(1)">1</button>
             <button onclick="getNumber(2)">2</button>
             <button onclick="getNumber(3)">3</button>
-            <button>&plus;</button>
+            <button onclick="getOperator('p')">&plus;</button>
             <button onclick="getNumber(4)">4</button>
             <button onclick="getNumber(5)">5</button>
             <button onclick="getNumber(6)">6</button>
-            <button>&minus;</button>
+            <button onclick="getOperator('m')">&minus;</button>
             <button onclick="getNumber(7)">7</button>
             <button onclick="getNumber(8)">8</button>
             <button onclick="getNumber(9)">9</button>
-            <button>&div;</button>
-            <button>&equals;</button>
+            <button onclick="getOperator('d')">&div;</button>
+            <button onclick="doEquation()">&equals;</button>
             <button onclick="getNumber(0)">0</button>
-            <button>&times;</button>
+            <button onclick="getOperator('t')">&times;</button>
+            <button style="color: brown;" id="opcode"></button>
         </div>
     </div>
     <script src="main.js"></script>

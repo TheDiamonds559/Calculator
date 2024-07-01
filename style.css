@@ -10,7 +10,12 @@ body {
 }
 
 .display {
-    height: 100px;
+    width: 200px;
+    font-size: 35px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    height: 50px;
     border-bottom: 1px solid black;
 }
 

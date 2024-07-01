@@ -5,6 +5,10 @@ let operator = '';
 
 let result = '';
 
+let justClear = () => {
+    location.reload()
+}
+
 let getNumber = btn => {
     if (number1 == '' || (number2 == '' && operator != ''))
         if (btn === 0)
@@ -36,7 +40,6 @@ let getOperator = op => {
         doEquation();
         number1 = result;
         operator = op;
-        updateOpCode();
         return;
     }
     if (number1 == '' || (operator != '' && number2 == ''))
@@ -47,25 +50,6 @@ let getOperator = op => {
         number1 = result;
     }
     operator = op;
-    updateOpCode();
-}
-
-let updateOpCode = () => {
-    let opcode = document.getElementById('opcode');
-    switch (operator) {
-        case 'p':
-            opcode.innerHTML = '&plus;'
-            break;
-        case 'm':
-            opcode.innerHTML = '&minus;'
-            break;
-        case 't':
-            opcode.innerHTML = '&times;'
-            break;
-        case 'd':
-            opcode.innerHTML = '&div;'
-            break;
-    }
 }
 
 let doEquation = () => {
@@ -74,7 +58,6 @@ let doEquation = () => {
     let b = parseInt(number2);
     number1 = '';
     number2 = '';
-    document.getElementById('opcode').innerHTML = '&equals;';
     switch (operator) {
         case 'p':
             result = a + b;
@@ -98,3 +81,4 @@ let doEquation = () => {
 let updateDisplayForResult = () => {
     document.getElementsByClassName('display')[0].textContent = result;
 }
+
